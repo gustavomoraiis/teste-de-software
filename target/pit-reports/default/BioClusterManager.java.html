@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>BioClusterManager.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.ArrayList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class BioClusterManager {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public List &#60; String &#62; processarClusters(List &#60; Observation &#62; obs, double raio, double threshold, boolean modoInter, int limiteSeguranca) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        List &#60; String &#62; conexoes = new ArrayList &#60; &#62; ();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_7'/>
+7
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_7'>2</a>
+<span>
+1. processarClusters : changed conditional boundary &rarr; KILLED<br/>
+2. processarClusters : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>        if (obs.size() &#60; 2) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_8'/>
+8
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_8'>1</a>
+<span>
+1. processarClusters : replaced return value with Collections.emptyList for BioClusterManager::processarClusters &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='survived'>            return conexoes;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_10'/>
+10
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_10'>2</a>
+<span>
+1. processarClusters : changed conditional boundary &rarr; KILLED<br/>
+2. processarClusters : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>        for (int i = 0; i &#60; obs.size(); i++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            Observation o1 = obs.get(i);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_12'/>
+12
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_12'>3</a>
+<span>
+1. processarClusters : changed conditional boundary &rarr; KILLED<br/>
+2. processarClusters : negated conditional &rarr; KILLED<br/>
+3. processarClusters : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>            for (int j = i + 1; j &#60; obs.size(); j++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                Observation o2 = obs.get(j);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_14'/>
+14
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_14'>3</a>
+<span>
+1. processarClusters : Replaced double subtraction with addition &rarr; SURVIVED<br/>
+2. processarClusters : Replaced double subtraction with addition &rarr; SURVIVED<br/>
+3. processarClusters : Replaced double addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='survived'>                double dist = Math.sqrt(Math.pow(o1.getX() - o2.getX(), 2) + Math.pow(o1.getY() - o2.getY(), 2));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_15'/>
+15
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_15'>10</a>
+<span>
+1. processarClusters : changed conditional boundary &rarr; SURVIVED<br/>
+2. processarClusters : changed conditional boundary &rarr; SURVIVED<br/>
+3. processarClusters : changed conditional boundary &rarr; SURVIVED<br/>
+4. processarClusters : negated conditional &rarr; KILLED<br/>
+5. processarClusters : negated conditional &rarr; KILLED<br/>
+6. processarClusters : negated conditional &rarr; KILLED<br/>
+7. processarClusters : negated conditional &rarr; KILLED<br/>
+8. processarClusters : negated conditional &rarr; KILLED<br/>
+9. processarClusters : negated conditional &rarr; KILLED<br/>
+10. processarClusters : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='survived'>                if ((dist &#60; raio &#38;&#38; (o1.getEspecieId() == o2.getEspecieId() || modoInter)) &#38;&#38; (o1.getSaude() &#62; threshold || o1.getSaude() &#62; threshold) &#38;&#38; !(o1.isInvasora() &#38;&#38; o2.isInvasora())) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                    conexoes.add(&#34;Cluster:&#34; + o1.getId() + &#34;-&#34; + o2.getId());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_18'/>
+18
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_18'>2</a>
+<span>
+1. processarClusters : changed conditional boundary &rarr; KILLED<br/>
+2. processarClusters : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>                if (conexoes.size() &#62;= limiteSeguranca) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_19'/>
+19
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_19'>1</a>
+<span>
+1. processarClusters : replaced return value with Collections.emptyList for BioClusterManager::processarClusters &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>                    return conexoes;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_23'/>
+23
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_23'>1</a>
+<span>
+1. processarClusters : replaced return value with Collections.emptyList for BioClusterManager::processarClusters &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>        return conexoes;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>class Observation {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private int id, especieId;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private double x, y, saude;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private boolean invasora;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Observation(int id, int especieId, double x, double y, double saude, boolean invasora) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        this.id = id;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        this.especieId = especieId;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        this.x = x;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        this.y = y;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        this.saude = saude;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        this.invasora = invasora;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getId() {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_39'/>
+39
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_39'>1</a>
+<span>
+1. getId : replaced int return with 0 for Observation::getId &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>        return id;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getEspecieId() {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_42'>1</a>
+<span>
+1. getEspecieId : replaced int return with 0 for Observation::getEspecieId &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>        return especieId;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public double getX() {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_45'/>
+45
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_45'>1</a>
+<span>
+1. getX : replaced double return with 0.0d for Observation::getX &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='survived'>        return x;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public double getY() {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_48'/>
+48
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_48'>1</a>
+<span>
+1. getY : replaced double return with 0.0d for Observation::getY &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='survived'>        return y;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public double getSaude() {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_51'/>
+51
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_51'>1</a>
+<span>
+1. getSaude : replaced double return with 0.0d for Observation::getSaude &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>        return saude;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isInvasora() {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_54'/>
+54
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_54'>2</a>
+<span>
+1. isInvasora : replaced boolean return with true for Observation::isInvasora &rarr; KILLED<br/>
+2. isInvasora : replaced boolean return with false for Observation::isInvasora &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class=''><pre><span  class='killed'>        return invasora;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@646d810b_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_7'>7</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_7'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC1_ConexaoValidaBase()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_8'>8</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_8'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>none</span></span> replaced return value with Collections.emptyList for BioClusterManager::processarClusters &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_10'>10</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_10'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC3_EspeciesDiferentesModoInterFalso()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_12'>12</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_12'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC3_EspeciesDiferentesModoInterFalso()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC3_EspeciesDiferentesModoInterFalso()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC3_EspeciesDiferentesModoInterFalso()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_14'>14</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_14'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>none</span></span> Replaced double subtraction with addition &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>none</span></span> Replaced double subtraction with addition &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC1_ConexaoValidaBase()]</span></span> Replaced double addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_15'>15</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_15'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC5_SaudeAbaixoThreshold()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC6_AmbasInvasoras()]</span></span> negated conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC5_SaudeAbaixoThreshold()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC3_EspeciesDiferentesModoInterFalso()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC3_EspeciesDiferentesModoInterFalso()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC6_AmbasInvasoras()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_18'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_19'>19</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_19'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()]</span></span> replaced return value with Collections.emptyList for BioClusterManager::processarClusters &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>processarClusters<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC1_ConexaoValidaBase()]</span></span> replaced return value with Collections.emptyList for BioClusterManager::processarClusters &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_39'>39</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_39'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getId<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC1_ConexaoValidaBase()]</span></span> replaced int return with 0 for Observation::getId &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_42'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getEspecieId<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC3_EspeciesDiferentesModoInterFalso()]</span></span> replaced int return with 0 for Observation::getEspecieId &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_45'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getX<br/><b>Killed by : </b>none</span></span> replaced double return with 0.0d for Observation::getX &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_48'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getY<br/><b>Killed by : </b>none</span></span> replaced double return with 0.0d for Observation::getY &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_51'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSaude<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()]</span></span> replaced double return with 0.0d for Observation::getSaude &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@646d810b_54'>54</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@646d810b_54'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isInvasora<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()]</span></span> replaced boolean return with true for Observation::isInvasora &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isInvasora<br/><b>Killed by : </b>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC6_AmbasInvasoras()]</span></span> replaced boolean return with false for Observation::isInvasora &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC3_EspeciesDiferentesModoInterFalso()] (0 ms)</li><li>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC5_SaudeAbaixoThreshold()] (0 ms)</li><li>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testLimiteSeguranca()] (0 ms)</li><li>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC1_ConexaoValidaBase()] (1 ms)</li><li>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC2_DistanciaForaDoRaio()] (4 ms)</li><li>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC4_EspeciesDiferentesModoInterVerdadeiro()] (1279 ms)</li><li>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testTC6_AmbasInvasoras()] (1740 ms)</li><li>BioClusterManagerTest.[engine:junit-jupiter]/[class:BioClusterManagerTest]/[method:testListaVaziaOuUnitaria()] (0 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.15.0
+
+</body>
+</html>

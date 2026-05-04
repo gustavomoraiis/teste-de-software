@@ -67,7 +67,8 @@ Para garantir MC/DC, cada condição deve demonstrar sua capacidade de alterar o
 | **TC5**  | T        | T           | F        | F         | F         | F         | **FALSE** | D (Falso)               |
 | **TC6**  | T        | T           | F        | T         | T         | T         | **FALSE** | E e F (Ambas invasoras) |
 
-_(Nota: Adicione aqui as capturas de tela do Jacoco antes e depois da execução dos testes)._
+![Execução do comando mvn clean test para gerar o relatório do Jacoco](https://github.com/gustavomoraiis/teste-de-software/blob/main/jacoco-terminal.png)
+![Relatório do Jacoco](https://github.com/gustavomoraiis/teste-de-software/blob/main/jacoco-report.png)
 
 ## 4. Teste Baseado em Mutação
 
@@ -75,7 +76,8 @@ A ferramenta PIT (PIT Mutation Testing) introduz falhas artificiais (mutantes) n
 
 Devido ao defeito na linha da saúde `(o1... || o1...)`, mutantes que alteram a avaliação do objeto `o2` provavelmente "sobreviverão", o que reforça o achado da etapa estrutural.
 
-_(Nota: Adicione aqui o relatório gerado pelo PIT - Score de Mutação e print de cobertura)._
+![Execução do comando mvn test-compile org.pitest:pitest-maven:mutationCoverage para gerar o relatório do PIT - Score de Mutação](https://github.com/gustavomoraiis/teste-de-software/blob/main/pit-report.png)
+![Relatório PIT BreakDown da classe BioClusterManager](https://github.com/gustavomoraiis/teste-de-software/blob/main/pit-breakdown-bioclustermanager.png)
 
 ## 5. Conjunto de Testes Implementados
 
@@ -113,7 +115,7 @@ public class BioClusterManagerTest {
         // A=T, B=T, C=F, D=T, E=F, F=F
         List<Observation> obs = Arrays.asList(
             new Observation(1, 1, 0.0, 0.0, 10.0, false),
-            new Observation(2, 1, 3.0, 4.0, 10.0, false) // Distância = 5.0
+            new Observation(2, 1, 3.0, 4.0, 10.0, false) // distância = 5.0
         );
         List<String> result = manager.processarClusters(obs, 6.0, 5.0, false, 10);
         assertEquals(1, result.size());
@@ -125,7 +127,7 @@ public class BioClusterManagerTest {
         // A=F
         List<Observation> obs = Arrays.asList(
             new Observation(1, 1, 0.0, 0.0, 10.0, false),
-            new Observation(2, 1, 10.0, 10.0, 10.0, false) // Distância = ~14.1
+            new Observation(2, 1, 10.0, 10.0, 10.0, false) // distância = ~14.1
         );
         List<String> result = manager.processarClusters(obs, 6.0, 5.0, false, 10);
         assertTrue(result.isEmpty());
@@ -155,9 +157,9 @@ public class BioClusterManagerTest {
 
     @Test
     public void testTC5_SaudeAbaixoThreshold() {
-        // D=F (Testando a falha no código onde apenas o1 importa atualmente)
+        // D=F (testando a falha no onde apenas o1 importa)
         List<Observation> obs = Arrays.asList(
-            new Observation(1, 1, 0.0, 0.0, 3.0, false), // Saúde abaixo
+            new Observation(1, 1, 0.0, 0.0, 3.0, false), // saúde abaixo
             new Observation(2, 1, 3.0, 4.0, 10.0, false)
         );
         List<String> result = manager.processarClusters(obs, 6.0, 5.0, false, 10);
@@ -182,7 +184,7 @@ public class BioClusterManagerTest {
             new Observation(2, 1, 1.0, 1.0, 10.0, false),
             new Observation(3, 1, 2.0, 2.0, 10.0, false)
         );
-        // Esperaria formar 1-2, 1-3, 2-3 (3 conexões). Limitando a 1.
+        // esperaria formar 1-2, 1-3, 2-3. limitando a 1
         List<String> result = manager.processarClusters(obs, 10.0, 5.0, false, 1);
         assertEquals(1, result.size());
     }
