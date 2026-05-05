@@ -5,15 +5,11 @@ RA: a2895102
 date: 01/05/2026
 ---
 
-## 1. Introdução
+## 1. Teste baseado em especificação
 
-Este relatório documenta a aplicação das técnicas de Teste Baseado em Especificação, Teste Estrutural (com foco em MC/DC) e Teste de Mutação sobre a classe `BioClusterManager`. O objetivo é garantir a correta delimitação de áreas prioritárias para conservação de espécies, calculando a distância euclidiana $d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$ e avaliando regras taxonômicas, de saúde e de segurança biológica.
+Analisado a especificação para identificar os parâmetros de entrada e suas classes de equivalência e valores limite.
 
-## 2. Teste Baseado em Especificação
-
-Seguindo o processo iterativo de derivação de testes, analisamos a especificação (requisitos) para identificar os parâmetros de entrada e suas respectivas classes de equivalência e valores limite (_boundaries_).
-
-### 2.1 Identificação das Partições e Limites
+### 1.1 Identificação das partições e limites
 
 | Parâmetro / Condição                         | Classe Válida (In-point)              | Classe Inválida / Limite (Out-point)           |
 | :------------------------------------------- | :------------------------------------ | :--------------------------------------------- |
@@ -25,9 +21,9 @@ Seguindo o processo iterativo de derivação de testes, analisamos a especifica�
 | **Segurança Biológica (`invasora`)**         | Apenas uma invasora; Nenhuma invasora | Ambas invasoras simultaneamente (`true, true`) |
 | **Limite de Segurança (`limiteSeguranca`)**  | `conexoes.size() < limiteSeguranca`   | `conexoes.size() >= limiteSeguranca`           |
 
-## 3. Teste Estrutural
+## 2. Teste estrutural
 
-A análise estrutural foca na cobertura do código-fonte. A principal decisão do método `processarClusters` encontra-se na seguinte estrutura condicional:
+A análise estrutural foca na cobertura do código-fonte. A principal método `processarClusters` está com a seguinte estrutura condicional:
 
 ```java
 if ((dist < raio && (o1.getEspecieId() == o2.getEspecieId() || modoInter)) &&
@@ -35,16 +31,16 @@ if ((dist < raio && (o1.getEspecieId() == o2.getEspecieId() || modoInter)) &&
     !(o1.isInvasora() && o2.isInvasora()))
 ```
 
-### 3.1 Defeitos Encontrados na Implementação
+### 2.1 Erros na implementação
 
-Durante a leitura do código para a modelagem MC/DC, dois defeitos críticos (erros) foram identificados na implementação da condicional:
+Dois erros foram identificados na implementação da condicional:
 
 1. **Validação de Saúde Duplicada (Erro de Copiar/Colar):** A expressão `(o1.getSaude() > threshold || o1.getSaude() > threshold)` verifica a saúde do objeto `o1` duas vezes e ignora completamente a saúde do objeto `o2`. Além disso, a especificação diz "indivíduos que possuam índices de saúde satisfatórios", o que implica um operador lógico `&&` (E), e não `||` (OU).
 2. **Loop de Limite de Segurança:** O retorno antecipado `if (conexoes.size() >= limiteSeguranca)` está dentro do loop interno. Isso funciona, mas a condição do loop não previne iterações desnecessárias no loop externo.
 
-### 3.2 Tabela Verdade MC/DC
+### 2.2 Tabela Verdade MC/DC
 
-Para derivar o MC/DC, abstraímos a condicional complexa. Como a implementação atual possui o defeito na saúde, testaremos a lógica considerando as variáveis independentes para demonstrar a falha.
+Para derivar o MC/DC, abstraído a condicional complexa. Testado a lógica considerando as variáveis independentes para demonstrar a falha.
 
 Seja a Decisão = `A && (B || C) && (D) && !(E && F)`
 
