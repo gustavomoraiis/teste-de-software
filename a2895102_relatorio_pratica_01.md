@@ -63,8 +63,8 @@ Para garantir MC/DC, cada condição demonstrar sua capacidade de alterar o resu
 | **TC5**  | T        | T           | F        | F         | F         | F         | **FALSE** | D (Falso)               |
 | **TC6**  | T        | T           | F        | T         | T         | T         | **FALSE** | E e F (Ambas invasoras) |
 
-![Execução do comando mvn clean test para gerar o relatório do Jacoco](https://raw.githubusercontent.com/gustavomoraiis/teste-de-software/refs/heads/main/jacoco-terminal.png?token=GHSAT0AAAAAADTCHNWESCPH5MXN7CEBUPE62P3FI2A)
-![Relatório do Jacoco](https://raw.githubusercontent.com/gustavomoraiis/teste-de-software/refs/heads/main/jacoco-report.png?token=GHSAT0AAAAAADTCHNWFOCRSG5LU4PEOOHAW2P3FI4Q)
+![Execução do comando mvn clean test para gerar o relatório do Jacoco](https://raw.githubusercontent.com/gustavomoraiis/teste-de-software/refs/heads/main/jacoco-terminal.png)
+![Relatório do Jacoco](https://raw.githubusercontent.com/gustavomoraiis/teste-de-software/refs/heads/main/jacoco-report.png)
 
 ## 3. Teste baseado em mutação
 
@@ -72,8 +72,8 @@ A ferramenta PIT (PIT Mutation Testing) introduz falhas artificiais (mutantes) n
 
 O defeito na linha da saúde `(o1... || o1...)`, mutantes que alteram a avaliação do objeto `o2` provavelmente permaneceram, o que reforça o achado da etapa estrutural.
 
-![Execução do comando mvn test-compile org.pitest:pitest-maven:mutationCoverage para gerar o relatório do PIT - Score de Mutação](https://raw.githubusercontent.com/gustavomoraiis/teste-de-software/refs/heads/main/pit-report.png?token=GHSAT0AAAAAADTCHNWEQSQQ2JWXNPRDE3U42P3FI6A)
-![Relatório PIT BreakDown da classe BioClusterManager](https://raw.githubusercontent.com/gustavomoraiis/teste-de-software/refs/heads/main/pit-breakdown-bioclustermanager.png?token=GHSAT0AAAAAADTCHNWF5XSFSILSHW5KJG2M2P3FI7Q)
+![Execução do comando mvn test-compile org.pitest:pitest-maven:mutationCoverage para gerar o relatório do PIT - Score de Mutação](https://raw.githubusercontent.com/gustavomoraiis/teste-de-software/refs/heads/main/pit-report.png)
+![Relatório PIT BreakDown da classe BioClusterManager](https://raw.githubusercontent.com/gustavomoraiis/teste-de-software/refs/heads/main/pit-breakdown-bioclustermanager.png)
 
 ## 4. Testes implementados com JUnit
 
